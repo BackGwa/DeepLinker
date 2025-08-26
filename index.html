@@ -7,12 +7,53 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>DeepLinker · Link Generator</title>
+    <meta name="description" content="Open deeplink from Markdown or blogs.">
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="./styles/root.css">
+    <link rel="stylesheet" href="./styles/index.css">
+
+    <script src="scripts/preview.js"></script>
 </head>
 
 <body>
-
+    <main>
+        <div class="container editor"></div>
+        <div class="container preview">
+            <div class="preview-toolbox">
+                <div class="tool-item">
+                    <button title="Simulate Mobile" class="toolbox-item" onclick="switchPreview('mobile');">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 10C4 6.22876 4 4.34315 5.17157 3.17157C6.34315 2 8.22876 2 12 2C15.7712 2 17.6569 2 18.8284 3.17157C20 4.34315 20 6.22876 20 10V14C20 17.7712 20 19.6569 18.8284 20.8284C17.6569 22 15.7712 22 12 22C8.22876 22 6.34315 22 5.17157 20.8284C4 19.6569 4 17.7712 4 14V10Z" stroke="#ffffff" stroke-width="1.5"/>
+                            <path d="M15 19H9" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <button title="Simulate Tablet" class="toolbox-item" onclick="switchPreview('tablet');">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 20C6.22876 20 4.34315 20 3.17157 18.8284C2 17.6569 2 15.7712 2 12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10 4L14 4C17.7712 4 19.6569 4 20.8284 5.17157C22 6.34315 22 8.22876 22 12C22 15.7712 22 17.6569 20.8284 18.8284C19.6569 20 17.7712 20 14 20H10Z" stroke="#ffffff" stroke-width="1.5"/>
+                            <path d="M15 17H9" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <button title="Simulate Desktop" class="toolbox-item" onclick="switchPreview('desktop');">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.84436 13V7.50664C2.84436 5.48403 4.48401 3.84439 6.50661 3.84439H17.4933C19.516 3.84439 21.1556 5.48403 21.1556 7.50663V13C21.1556 15.0226 19.5159 16.6623 17.4933 16.6623H6.50661C4.484 16.6623 2.84436 15.0226 2.84436 13Z" stroke="#ffffff" stroke-width="1.7"/>
+                            <path d="M6.03967 20.3245H17.9603" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="page-name">{{PageName}}</div>
+                <div class="tool-item">
+                    <button title="Refrash" class="toolbox-item">1</button>
+                    <button title="Share" class="toolbox-item">2</button>
+                    <button title="Zoom in/out" class="toolbox-item">3</button>
+                </div>
+            </div>
+            <div class="screen-simulate">
+                <iframe src="./redirect.html" frameborder="0" id="simulator"></iframe>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
