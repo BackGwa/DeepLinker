@@ -1,0 +1,1 @@
+/* device.js : Returns the user's device information. (Supported devices: Android, iOS, Windows, Linux, macOS) */

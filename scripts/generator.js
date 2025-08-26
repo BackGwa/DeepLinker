@@ -1,0 +1,1 @@
+/* generator.js : Generates a Deeplink based on the information provided by the user. */

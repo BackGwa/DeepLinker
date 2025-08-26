@@ -1,0 +1,1 @@
+/* redirect.js : Calls a deeplink or redirects to the specified page. */

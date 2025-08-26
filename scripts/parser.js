@@ -1,0 +1,1 @@
+/* parser.js : parses the GET syntax of redirect links. */
