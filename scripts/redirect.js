@@ -37,20 +37,28 @@ function redirectToFallback(content) {
     location.href = fallbackLink;
 }
 
-function renderScreen() {
-    
+function renderScreen(content) {
+    const iconComponent = document.getElementById("applicationIcon");
+    const nameComponent = document.getElementById("applicationName");
+
+    console.log(content);
+
+    iconComponent.src = content.applicationIcon;
+    nameComponent.textContent = content.applicationName;
 }
 
 window.onload = () => {
     const simulator = isSimulator();
     const content = parseLink();
 
+    console.log("Content : ", content);
+
     if (content === null) {
         alert("Invalid Link");
         location.href = "about:blank";
     }
     
-    renderScreen();
+    renderScreen(content);
 
     if (!simulator) {
         if (content.applicationDeepLink) {

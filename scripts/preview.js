@@ -2,8 +2,7 @@
 
 function updatePreview() {
     const preview = document.querySelector("#simulator");
-    preview.link = generateLink();
-    refreshPreview();
+    preview.src = generateLink();
 }
 
 function switchPreview(type) {
@@ -32,6 +31,8 @@ function refreshPreview() {
 }
 
 function shareLink() {
+    const link = generateLink();
+    navigator.clipboard.writeText(link);
     showDialog("Copied!");
 }
 
