@@ -27,13 +27,23 @@ function switchPreview(type) {
 function refreshPreview() {
     const preview = document.querySelector("#simulator");
     preview.contentWindow.location.reload();
+    showDialog("Refreshed!");
 }
 
 function shareLink() {
-
+    showDialog("Copied!");
 }
 
 function zoomInOut() {
     const previewWrapper = document.querySelector(".screen-simulate");
     previewWrapper.classList.toggle("preview-zoom");
+}
+
+function showDialog(message) {
+    const dialog = document.querySelector(".preview-dialog");
+    dialog.textContent = message;
+
+    dialog.classList.remove("show");
+    void dialog.offsetWidth;
+    dialog.classList.add("show");
 }
