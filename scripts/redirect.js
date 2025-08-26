@@ -41,8 +41,7 @@ function renderScreen(content) {
     const iconComponent = document.getElementById("applicationIcon");
     const nameComponent = document.getElementById("applicationName");
 
-    console.log(content);
-
+    window.document.title = `Redirecting to ${content.applicationName}...`;
     iconComponent.src = content.applicationIcon;
     nameComponent.textContent = content.applicationName;
 }
@@ -50,8 +49,6 @@ function renderScreen(content) {
 window.onload = () => {
     const simulator = isSimulator();
     const content = parseLink();
-
-    console.log("Content : ", content);
 
     if (content === null) {
         alert("Invalid Link");

@@ -3,6 +3,15 @@
 function updatePreview() {
     const preview = document.querySelector("#simulator");
     preview.src = generateLink();
+    preview.onload = () => {
+        renderPreview(preview);
+    };
+}
+
+function renderPreview(simulator) {
+    const previewTitle = document.querySelector(".page-name");
+    const previewDocument = simulator.contentDocument || simulator.contentWindow.document;
+    previewTitle.textContent = previewDocument.title;
 }
 
 function switchPreview(type) {
@@ -48,4 +57,8 @@ function showDialog(message) {
     dialog.classList.remove("show");
     void dialog.offsetWidth;
     dialog.classList.add("show");
+}
+
+window.onload = () => {
+    updatePreview();
 }

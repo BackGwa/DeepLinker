@@ -13,7 +13,7 @@ function parseLink(url) {
     const absoluteUrl = new URL(window.location.href);
     const params = absoluteUrl.searchParams;
     const base64Data = params.get('data');
-    console.log("Base64 Data : ", base64Data);
+
     if (!base64Data) return null;
     
     try {
