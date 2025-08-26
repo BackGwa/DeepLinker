@@ -1,20 +1,39 @@
 /* preview.js : Displays the designed Deeplink page live. */
 
+function updatePreview() {
+    refreshPreview();
+}
+
+
 function switchPreview(type) {
-    const preview = document.querySelector(".screen-simulate");
+    const previewWrapper = document.querySelector(".screen-simulate");
     
     switch (type) {
         case "mobile":
-            preview.id = "mobile-preview";
+            previewWrapper.id = "mobile-preview";
             break;
         case "tablet":
-            preview.id = "tablet-preview";
+            previewWrapper.id = "tablet-preview";
             break;
         case "desktop":
-            preview.id = "";
+            previewWrapper.id = "";
             break;
         default:
-            preview.id = ""; 
+            previewWrapper.id = ""; 
             break;
     }    
+}
+
+function refreshPreview() {
+    const preview = document.querySelector("#simulator");
+    preview.contentWindow.location.reload();
+}
+
+function shareLink() {
+
+}
+
+function zoomInOut() {
+    const previewWrapper = document.querySelector(".screen-simulate");
+    previewWrapper.classList.toggle("preview-zoom");
 }

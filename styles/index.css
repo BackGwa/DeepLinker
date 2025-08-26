@@ -59,7 +59,7 @@ main {
     z-index: 0;
 }
 
-#mobile-preview, #tablet-preview{
+#mobile-preview, #tablet-preview {
     border: solid 1.5rem #000000;
     border-radius: 32px;
     filter: drop-shadow(0 4px 16px #00000050);
@@ -129,4 +129,24 @@ main {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+#mobile-preview.preview-zoom {
+    width: auto;
+    height: 100%;
+    aspect-ratio: 390 / 844;
+    border: none;
+    border-radius: 0;
+    filter: none;
+    -webkit-filter: none;
+}
+
+#tablet-preview.preview-zoom {
+    width: auto;
+    height: 100%;
+    aspect-ratio: 810 / 1080;
+    border: none;
+    border-radius: 0;
+    filter: none;
+    -webkit-filter: none;
 }
