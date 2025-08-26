@@ -31,7 +31,7 @@ function redirectToFallback(content) {
     }
 
     if (!fallbackLink || agent === "Unknown") {
-        fallbackLink = content.WebLink || "about:blank";
+        fallbackLink = content.applicationWebLink || "about:blank";
     }
 
     location.href = fallbackLink;
