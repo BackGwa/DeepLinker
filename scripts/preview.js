@@ -1,6 +1,8 @@
 /* preview.js : Displays the designed Deeplink page live. */
 
 function updatePreview() {
+    const preview = document.querySelector("#simulator");
+    preview.link = generateLink();
     refreshPreview();
 }
 
