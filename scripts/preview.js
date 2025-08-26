@@ -43,8 +43,13 @@ function refreshPreview() {
 
 function shareLink() {
     const link = generateLink();
-    navigator.clipboard.writeText(link);
-    showDialog("Copied!");
+    navigator.clipboard.writeText(link)
+        .then(() => {
+            showDialog("Copied!");
+        })
+        .catch(() => {
+            showDialog("Copy failed. Please try manually.");
+        });
 }
 
 function zoomInOut() {
