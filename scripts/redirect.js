@@ -40,10 +40,12 @@ function redirectToFallback(content) {
 function renderScreen(content) {
     const iconComponent = document.getElementById("applicationIcon");
     const nameComponent = document.getElementById("applicationName");
+    const descComponent = document.getElementById("applicationDesciption");
 
     window.document.title = `Redirecting to ${content.applicationName}...`;
     iconComponent.src = content.applicationIcon;
     nameComponent.textContent = content.applicationName;
+    descComponent.textContent = content.applicationDesciption;
 }
 
 window.onload = () => {

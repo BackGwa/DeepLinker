@@ -2,6 +2,7 @@
 
 function collectContent() {
     const applicationName = document.getElementById("application-name")?.value || 'Application';
+    const applicationDesciption = document.getElementById("application-description")?.value || `You will be redirected to ${applicationName}.`;
     const applicationIcon = document.getElementById("application-icon")?.value || `https://www.gravatar.com/avatar/${applicationName}?d=identicon`;
     const applicationDeepLink = document.getElementById("application-deeplink")?.value || '';
     const applicationWebLink = document.getElementById("web-link")?.value || '';
@@ -14,6 +15,7 @@ function collectContent() {
     return {
         "applicationIcon": applicationIcon,
         "applicationName": applicationName,
+        "applicationDesciption": applicationDesciption,
         "applicationDeepLink": applicationDeepLink,
         "applicationWebLink": applicationWebLink,
         "applicationAndroidLink": applicationAndroidLink,
