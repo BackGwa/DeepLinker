@@ -4,7 +4,6 @@ function updatePreview() {
     refreshPreview();
 }
 
-
 function switchPreview(type) {
     const previewWrapper = document.querySelector(".screen-simulate");
     
