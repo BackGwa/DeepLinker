@@ -36,7 +36,9 @@ function switchPreview(type) {
 function refreshPreview() {
     const preview = document.querySelector("#simulator");
     preview.contentWindow.location.reload();
-    showDialog("Refreshed!");
+    preview.onload = () => {
+        showDialog("Refreshed!");
+    };
 }
 
 function shareLink() {
