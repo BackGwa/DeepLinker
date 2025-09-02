@@ -1,8 +1,5 @@
-
-> [!IMPORTANT]
-> This project is still under development, and some features may not work or may be unstable.
-
-<div align="center">
+<!-- Project Description -->
+<br><div align="center">
 
 |![DeepLinker Banner](assets/DeepLinker.png)|
 |-|
@@ -16,11 +13,25 @@
 DeepLinker is a free and open-source redirect service that helps open deep links seamlessly on web and app platforms that only support Markdown or HTTP/HTTPS links.  
 It converts app deep links into universal HTTP redirect links that work across all platforms, intelligently detecting the user’s platform and directing them to the appropriate app or an alternative web version.
 
-⚠️ **Important** : Never include sensitive information in a DeepLink. These links are not secure!
+</div>
+
+> [!IMPORTANT]
+> Never include sensitive information in a DeepLink. These links are not secure!
+
+> [!IMPORTANT]
+> This project is still under development, and some features may not work or may be unstable.
+
+<!-- Project Self-Hosting -->
+<br><div align="center">
+
+##  🖥️ Self-Hosting
+DeepLinker Service is you can self hosting!
+
 
 </div>
 
-<div align="center">
+<!-- Project Contribute -->
+<br><div align="center">
 
 ## ⭐ Star History
 
