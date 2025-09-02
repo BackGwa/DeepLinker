@@ -1,0 +1,28 @@
+{
+    "index" : {
+        "default_title" : "DeepLinker · Link Generator",
+        "editor" : {
+
+        },
+        "preview" : {
+            "simulate_mobile" : "Simulate Mobile",
+            "simulate_tablet" : "Simulate Tablet",
+            "simulate_desktop" : "Simulate Desktop",
+            "refresh" : {
+                "tooltip" : "Refresh",
+                "success" : "Refreshed!"
+            },
+            "share" : {
+                "tooltip" : "Share",
+                "success" : "Copied!",
+                "failed" : "Copy failed. Please try manually."
+            },
+            "fit_screen" : "Fit Screen"
+        }
+    },
+    "redirect" : {
+        "default_title" : "Redirecting...",
+        "render_title" : "Redirecting to {{applicationName}}...",
+        "invalid_link" : "This link is invalid or has expired."
+    }
+}

@@ -53,7 +53,7 @@ window.onload = () => {
     const content = parseLink();
 
     if (content === null) {
-        alert("Invalid Link");
+        alert("This link is invalid or has expired.");
         location.href = "about:blank";
     }
     
